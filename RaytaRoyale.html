@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The "Mum-Approved" Guava-Bean Raita v1.0</title>
+    <style>
+        :root {
+            --primary: #FF6B6B; /* Guava Pink */
+            --secondary: #4ECDC4; /* Fresh Teal */
+            --accent: #FFE66D; /* Mustard */
+            --dark: #2d3436;
+            --light: #f9f9f9;
+            --text: #636e72;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: #f0f3f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 { margin: 0; font-size: 2.5rem; letter-spacing: -1px; }
+        .subtitle { font-weight: 300; opacity: 0.9; margin-top: 10px; font-size: 1.1rem; }
+
+        .meta-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .tag { background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; }
+
+        .content { padding: 40px; }
+
+        h2 { color: var(--dark); border-bottom: 3px solid var(--accent); display: inline-block; margin-top: 30px; }
+        
+        .ingredients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .ing-category {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid var(--secondary);
+        }
+
+        .ing-category h3 { margin-top: 0; color: #2d3436; font-size: 1.1rem; }
+        ul { padding-left: 20px; margin: 0; }
+        li { margin-bottom: 8px; }
+
+        .steps { counter-reset: step; margin-top: 30px; }
+        .step { position: relative; padding-left: 50px; margin-bottom: 25px; }
+        .step::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 35px;
+            height: 35px;
+            background: var(--dark);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+        }
+
+        .step-title { font-weight: bold; color: var(--dark); display: block; margin-bottom: 5px; }
+        
+        .secret-ingredient {
+            background: #ffeaa7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #d35400;
+            font-weight: bold;
+        }
+
+        .final-note {
+            background: #dff9fb;
+            color: #2c3e50;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 40px;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        /* Placeholder for images */
+        .food-image {
+            width: 100%;
+            height: 300px;
+            background-color: #ddd;
+            background-image: url('https://images.unsplash.com/photo-1599632863615-53531b46321f?q=80&w=1000&auto=format&fit=crop'); 
+            background-size: cover;
+            background-position: center;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .content { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="food-image"></div>
+    <header>
+        <h1>Guava-Bean "Raita Royale"</h1>
+        <div class="subtitle">Sweet Base • Spicy Roof • Savory Core</div>
+        <div class="meta-tags">
+            <span class="tag">⏱️ 30 Mins</span>
+            <span class="tag">🌶️ High Spice</span>
+            <span class="tag">🏆 Mum Approved</span>
+        </div>
+    </header>
+
+    <div class="content">
+        <p>A daring fusion of North Indian "Chatpata" flavors and rustic textures. This recipe balances the floral sweetness of guava with the earthy depth of beans, all suspended in a sweetened yogurt base to fight the heat of six green chilies.</p>
+
+        <h2>The Build (Ingredients)</h2>
+        <div class="ingredients-grid">
+            <div class="ing-category">
+                <h3>The "Sweet" Base</h3>
+                <ul>
+                    <li><strong>Dahi:</strong> Plain Curd (User's Choice)</li>
+                    <li><strong>Milk:</strong> 1 Cup (for consistency)</li>
+                    <li><strong>Sweetener:</strong> Khaand (Raw Sugar)</li>
+                    <li><strong>Seasoning:</strong> Black Salt, Black Pepper, Bhuna Jeera</li>
+                </ul>
+            </div>
+            <div class="ing-category">
+                <h3>The "Spicy" Fruit</h3>
+                <ul>
+                    <li><strong>Guavas:</strong> 3 Total (2 firm, 1 ripe)</li>
+                    <li><strong>Heat:</strong> 6 Green Chilies (No red!)</li>
+                    <li><strong>Tadka:</strong> Mustard Oil, Jeera</li>
+                    <li><strong>Seasoning:</strong> White Table Salt</li>
+                </ul>
+            </div>
+            <div class="ing-category">
+                <h3>The "Savory" Core</h3>
+                <ul>
+                    <li><strong>Veg:</strong> 1 Onion, Small bowl of Green Beans</li>
+                    <li><strong>Secret Weapon:</strong> <span class="secret-ingredient">1 Sachet Tomato Ketchup</span></li>
+                    <li><strong>Masala:</strong> Catch Masala, Saunf, Ajwain, Hing</li>
+                    <li><strong>Tadka:</strong> Mustard Oil, Rai (Mustard Seeds)</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>The Algorithm (Instructions)</h2>
+        <div class="steps">
+            <div class="step">
+                <span class="step-title">Compile the Guava Reduction</span>
+                Blend guavas (seeds included) with green chilies. Heat mustard oil in a pan, crackle the Jeera, and pour in the pulp. Add white salt. Simmer until reduced and concentrated. Set aside to cool.
+            </div>
+            <div class="step">
+                <span class="step-title">Render the Savory Paste</span>
+                Blend the dark red onion and beans (no chilies). In a separate pan, heat mustard oil with Rai and Hing. Add the paste. Stir in Saunf powder, Catch Masala, Ajwain, and the <strong>Ketchup Sachet</strong>. Cover and cook ("let it go brrr") until roasted.
+            </div>
+            <div class="step">
+                <span class="step-title">Initialize the Base</span>
+                In a large bowl, whisk the Plain Dahi with 1 cup of milk. Add the <strong>Khaand</strong> (crucial for heat balance), Bhuna Jeera, Black Pepper, and Black Salt. Whisk until silky.
+            </div>
+            <div class="step">
+                <span class="step-title">Deployment (Assembly)</span>
+                1. Fold the slightly cooled <em>Onion-Bean paste</em> into the sweet curd mix.<br>
+                2. Temper the mix by adding the hot <em>Guava Reduction</em> one spoon at a time.<br>
+                3. Adjust salt (add more Black Salt to taste).
+            </div>
+            <div class="step">
+                <span class="step-title">Final Commit</span>
+                Serve immediately with a massive "flood" of Masala Boondi on top for crunch.
+            </div>
+        </div>
+
+        <div class="final-note">
+            "The seeds only added to texture... Mum says it's amazing."
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
